@@ -187,3 +187,65 @@ dialog{
     justify-content: center;
     padding: 16px;
 }
+
+/* Media Care */
+
+@media (max-width: 410px)
+{
+    .card{
+        width: 300px;
+        height: 600px;
+    }
+    .illustration{
+        width: 300px;
+        height: 250px;
+    }
+    .summary h2{
+        font-size: 19spx;
+    }
+    .summary p{
+        font-size: 14px;
+    }
+    .plan{
+        margin-bottom: 16px;
+        margin-left: 16px;
+        max-width: 234px;
+        height: 150px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .img_plan{
+        width: 34px;
+        height: 34px;
+    }
+    .plan_value{
+        margin-left: -34px;
+    }
+    .plan_content{
+        font-size: 14px;
+        line-height: revert;
+    }
+    .which_plan{
+        font-size: 13px;
+        line-height: revert;
+    }
+    .plan_change{
+        font-size: 15px;
+    }
+    input{
+        font-size: 13px;
+        padding-left: 68px;
+        padding-right: 68px;
+    }
+    .order_cancel a{
+        font-size: 11px;
+    }
+    dialog{
+        width: 350px;
+        height: 100px;
+    }
+    .select_plan{
+        border: none;
+        font-size: 14px;
+    }
+}

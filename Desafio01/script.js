@@ -19,7 +19,7 @@ button.onclick =  function(){
 change.onclick = function(){
     modal.showModal()
     modalContent.innerHTML = 
-    `<select>
+    `<select class="select_plan">
         <option selected>Select a plan.</option>
         <option value="1" id="annual">Annual Plan</option>
         <option value="2" id="semester">Semester Plan</option>
