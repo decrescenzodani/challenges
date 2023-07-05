@@ -146,9 +146,6 @@ dialog button{
     height: 110px;
     padding: 16px;
     margin-left: 150px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 .result{
     background-color: #2C3740;
@@ -168,4 +165,67 @@ dialog button{
 }
 .attribution a{ 
     color: #828995; 
+}
+
+@media (max-width: 495px)
+{
+    .card{
+        width: 370px;
+        height: 380px;
+    }
+    .illustration{
+        width: 40px;
+        height: 40px;
+        margin-left: 34px;
+    }
+    .title_card{
+        font-size: 18px;
+        margin-left: 34px;
+    }
+    .text_card{
+        font-size: 14px;
+        margin-left: 34px;
+    }
+    .stars{
+        width: 11px;
+        height: 11px;
+        margin: 11px;
+    }
+    .submit_button{
+        font-size: 12px;
+        width: 300px;
+        height: 40px;
+    }
+    dialog{
+        width: 360px;
+        height: 380px;
+    }
+    dialog h3{
+        padding: 2px;
+    }
+    dialog p{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        margin-left: 25px;
+    }
+    dialog button{
+        margin-left: 290px;
+        margin-top: 7px;
+    }
+    .button_close{
+        width: 30px;
+        height: 30px; 
+    }
+    .thanks_illustration{
+        padding: 7px;
+        width: 150px;
+        height: 90px;
+        margin-left: 90px; 
+    }
+    .result{
+        margin-left: 50px;
+        margin-top: 16px;
+        width: 250px;
+        height: 25px;
+    }
 }
