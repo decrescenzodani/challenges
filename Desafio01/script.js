@@ -7,7 +7,7 @@ let orderCancel = document.querySelector('.order_cancel')
 
 button.onclick =  function(){
     modal.showModal()
-    modalContent.innerHTML = 'Plano selecionado com sucesso!'
+    modalContent.innerHTML = 'Successfully selected plan!'
 
     buttonClose.onclick = function(){
         modal.close()
@@ -47,7 +47,7 @@ change.onclick = function(){
 
 orderCancel.onclick = function(){
     modal.showModal()
-    modalContent.innerHTML = 'Ordem cancelada com sucesso!'
+    modalContent.innerHTML = 'Order canceled successfully!'
 
     buttonClose.onclick = function(){
         modal.close()
