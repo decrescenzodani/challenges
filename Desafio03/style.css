@@ -48,7 +48,8 @@ body{
 .title_form{
     color: hsl(234, 29%, 20%);
     font-weight: 700;
-    font-size: 43px;
+    font-size: 52px;
+    margin-right: 19px;
 }
 .text_form{
     color: hsl(234, 29%, 20%);
