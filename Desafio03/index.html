@@ -46,8 +46,14 @@
 
       <form action="#">
         
-        <label for="email" class="email_label">Email address</label>
-        <input type="email" name="email" id="email" placeholder="email@company.com">
+        <div class="labels">
+
+          <label for="email" class="email_label">Email address</label>
+          <span id="error_email"></span>
+
+        </div>
+        
+        <input type="text" name="email" id="email" placeholder="email@company.com" >
 
         <input type="submit" value="Subscribe to monthly newsletter" class="button_submit">
 
@@ -72,7 +78,7 @@
         </h2>
 
         <p class="text_popup">
-          A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+          A confirmation email has been sent to <strong> <span>ash@loremcompany.com</span></strong>. 
           Please open it and click the button inside to confirm your subscription.
       </p>
 
