@@ -1,0 +1,239 @@
+@font-face{
+    font-family: "Roboto";
+    src: url('./assets/fonts/Roboto-Bold.ttf') format("truetype");
+    font-style: normal;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url('./assets/fonts/Roboto-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+body{
+    background-color: hsl(235, 18%, 26%);
+    font-family: 'Roboto';
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 580px;
+    width: 880px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 340px;
+    height: 400px;
+}
+.illustration_form{
+    background-image: url('./assets/images/illustration-sign-up-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    width: 380px;
+    height: 530px;
+}
+.title_form{
+    color: hsl(234, 29%, 20%);
+    font-weight: 700;
+    font-size: 52px;
+    margin-right: 19px;
+    margin-bottom: 7px;
+}
+.text_form{
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+    font-size: 16px;
+    width: 370px;
+}
+.inputs_checkbox{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+}
+.checkbox_label{
+    color: hsl(234, 29%, 20%);
+    font-size: 14px;
+}
+.checkbox_label::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    margin-right: 16px;
+    background-color: hsl(4, 100%, 67%);
+    background-image: url('./assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+}
+label{
+    display: flex;
+    padding: 4px;
+}
+form{
+    margin-top: 34px;
+}
+.email_label{
+    color: hsl(234, 29%, 20%); 
+    font-size: 11px;
+    font-weight: 700;
+}
+.labels{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#email{
+    border: 2px solid hsla(231, 7%, 60%, 0.6);
+    border-radius: 7px;
+    max-width: 370px;
+    width: 93%;
+    height: 43px;
+    margin: 7px 0 7px 0;
+    cursor: pointer;
+    padding-left: 16px;
+}
+#error_email{
+    color: hsl(4, 100%, 67%);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+input#email.invalid_email{
+    background-color: hsl(4, 92%, 86%);
+    border: 1px solid hsl(4, 100%, 67%);
+    outline: none;
+}
+.button_submit{
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 7px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-size: 14px;
+    max-width: 370px;
+    width: 100%;
+    height: 47px;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+}
+.button_submit:hover{
+    background: rgb(255,84,118);
+    background: linear-gradient(90deg, rgba(255,84,118,1) 0%, rgba(254,94,96,1) 55%, rgba(255,103,62,1) 100%);
+    box-shadow: 2px 2px 16px rgb(255, 84, 118);
+}
+dialog{
+    border: none;
+    border-radius: 25px;
+    color: hsl(234, 29%, 20%);
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; */
+    width: 370px;
+    height: 400px;
+}
+.illustration_popup{
+    background-image: url('./assets/images/icon-success.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 43px;
+    margin-left: 34px;
+    margin-top: 43px;
+}
+.title_popup{
+    font-size: 43px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    margin-left: 34px;
+    width: 300px;
+}
+.text_popup{
+    font-size: 14px;
+    margin-left: 34px;
+    margin-bottom: 16px;
+    width: 300px;
+}
+.button_close{
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin-left: 34px;
+    width: 300px;
+    height: 43px;
+}
+.button_close:hover{
+    background: rgb(255,84,118);
+    background: linear-gradient(90deg, rgba(255,84,118,1) 0%, rgba(254,94,96,1) 55%, rgba(255,103,62,1) 100%);
+    box-shadow: 2px 2px 16px rgb(255, 84, 118);
+}
+footer{
+    color: white;
+    padding: 16px;
+}
+.attribution{
+    font-size: 11px; text-align: center; 
+}
+.attribution a{
+    color: hsl(231, 7%, 60%);
+}
+
+@media (max-width: 426px) {
+    body{
+        margin: 0;
+    }
+
+    .main{
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+        border-radius: 0;
+    }
+
+    .illustration_form {
+        background: url('./assets/images/illustration-sign-up-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .form{
+        height: auto;
+        padding: 0 25px;
+    }
+    .text_form{
+        padding: 0 25px;
+        width: auto;
+    }
+    .inputs_checkbox{
+        padding: 0 25px;
+        width: auto;
+    }
+
+    footer{
+        display: none;
+    }
+
+}

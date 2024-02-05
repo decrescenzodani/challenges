@@ -1,0 +1,231 @@
+body{
+    background-color: #0A0B0D;
+    color: white;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    max-width: 1440px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+}
+.card{
+    background-color: #2c37407f;
+    border-radius: 25px;
+    box-shadow: 7px 7px 11px #82899517;
+    display: flex;
+    width: 470px;
+    height: 480px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.illustration{
+    background-color: #2c37405c;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 43px;
+}
+.card_content{
+    text-align: left;
+}
+.title_card{
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 43px;
+    margin-right: 16px;
+}
+.text_card{
+    color: #828995;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: 43px;
+    margin-right: 16px;
+}
+.valutation{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+.stars{
+    background-color: #2c37405c;
+    border-radius: 50%;
+    color: #828995;
+    margin: 16px;
+    padding: 16px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.stars:hover{
+    background-color: #828995;
+    color: white;
+}
+.active{
+    background-color: #F26716;
+    color: white;  
+}
+.submit_button{
+    background-color: #F26716;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    width: 400px;
+    height: 40px;
+}
+.submit_button:hover{
+    background-color: white;
+    color: #F26716;
+}
+.thanks_popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+dialog{
+    background-color: #273139;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 7px 7px 11px #82899517;
+    width: 470px;
+    height: 480px;
+    text-align: center;
+}
+dialog h3{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 16px;
+}
+dialog p{
+    color: #828995;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-left: 34px;
+    margin-right: 16px;
+}
+dialog button{
+    margin-left: 400px;
+    margin-top: 16px;
+}
+.button_close{
+    background-color: #2C3740;
+    border: none;
+    border-radius: 50%;
+    color: #F26716;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button_close:hover{
+    background-color: #828995;
+    color: white;
+}
+.thanks_illustration{
+    background-image: url(./images/illustration-thank-you.svg);
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 110px;
+    padding: 16px;
+    margin-left: 150px;
+}
+.result{
+    background-color: #2C3740;
+    border-radius: 16px;
+    color: #F26716; 
+    width: 250px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 110px;
+}
+
+.attribution{ 
+    font-size: 11px; text-align: center; 
+    padding: 25px;
+}
+.attribution a{ 
+    color: #828995; 
+}
+
+@media (max-width: 495px)
+{
+    .card{
+        width: 370px;
+        height: 380px;
+    }
+    .illustration{
+        width: 40px;
+        height: 40px;
+        margin-left: 34px;
+    }
+    .title_card{
+        font-size: 18px;
+        margin-left: 34px;
+    }
+    .text_card{
+        font-size: 14px;
+        margin-left: 34px;
+    }
+    .stars{
+        width: 11px;
+        height: 11px;
+        margin: 11px;
+    }
+    .submit_button{
+        font-size: 12px;
+        width: 300px;
+        height: 40px;
+    }
+    dialog{
+        width: 360px;
+        height: 380px;
+    }
+    dialog h3{
+        padding: 2px;
+    }
+    dialog p{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        margin-left: 25px;
+    }
+    dialog button{
+        margin-left: 290px;
+        margin-top: 7px;
+    }
+    .button_close{
+        width: 30px;
+        height: 30px; 
+    }
+    .thanks_illustration{
+        padding: 7px;
+        width: 150px;
+        height: 90px;
+        margin-left: 90px; 
+    }
+    .result{
+        margin-left: 50px;
+        margin-top: 16px;
+        width: 250px;
+        height: 25px;
+    }
+}
