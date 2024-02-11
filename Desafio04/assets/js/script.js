@@ -19,7 +19,7 @@ selectPokemon.on("change", function (e) {
             console.log(response)
 
             let pokeball = ""
-            const pokemonExist = verifyIfPokemonExist(currentPokemonList, response)
+            const pokemonExist = verifyIfPokemonExist(listPokemon, response)
             if (pokemonExist) {
                 pokeball = "./assets/images/pokeball-close.png"
             } else {
@@ -35,33 +35,32 @@ selectPokemon.on("change", function (e) {
                             <h4 class="fs-2 fw-bold text-capitalize">${response.name}</h4>
                             <img class="pokeball" src="${pokeball}" alt="">
                         </div>
-                            <div class="mb-2 row">
-                                <p class="mb-1 fw-bold col-12">Abilities</p>
-                                ${response.abilities.map(function (element) {
-                return `<span class="col-6 text-uppercase texts-results"> ${element.ability.name}</span>`
-            }).join("")}
-                            </div>
-                            <hr>
-                            <div class="mb-2 row">
-                                <p class="mb-1 fw-bold col-12">Stats</p>
-                                ${response.stats.map(function (element) {
-                return `<p class="col-6 mb-0"> <span id="stats" class="fw-semibold text-uppercase">${element.stat.name}</span>: ${element.base_stat}</p>`
-            }).join("")}
-                            </div>
-                            <hr>
-                            <div class="mb-2 row">
-                                <p class="mb-1 fw-bold col-12">Types</p>
+                        <div class="mb-2 row">
+                            <p class="mb-1 fw-bold col-12">Abilities</p>
+                            ${response.abilities.map(function (element) {
+                                return `<span class="col-6 text-uppercase texts-results"> ${element.ability.name}</span>`
+                            }).join("")}
+                        </div>
+                        <hr>
+                        <div class="mb-2 row">
+                            <p class="mb-1 fw-bold col-12">Stats</p>
+                            ${response.stats.map(function (element) {
+                                return `<p class="col-6 mb-0"> <span id="stats" class="fw-semibold text-uppercase">${element.stat.name}</span>: ${element.base_stat}</p>`
+                            }).join("")}
+                        </div>
+                        <hr>
+                        <div class="mb-2 row">
+                            <p class="mb-1 fw-bold col-12">Types</p>
                                 ${response.types.map(function (element) {
-                return `<span class="col-6 text-uppercase texts-results"> ${element.type.name}</span>`
-            }).join("")/*O ".join" é referente ao separador que vem junto com os eles. Nesta caso era uma virgula
-                            quando eu coloquei ("") eu disse para apagar essa virgula.*/ }
-                            </div>
+                                return `<span class="col-6 text-uppercase texts-results"> ${element.type.name}</span>`
+                            }).join("")/*O ".join" é referente ao separador que vem junto com os eles. Nesta caso era uma virgula
+                        quando eu coloquei ("") eu disse para apagar essa virgula.*/ }
+                        </div>
                     </div>
-                    
                 </div>
             `)
-            const pokeballElement = $("img.pokeball")
 
+            const pokeballElement = $("img.pokeball")
             pokeballElement.on("click", function (e) {
                 const target = $(e.currentTarget)
                 
@@ -70,7 +69,7 @@ selectPokemon.on("change", function (e) {
                 como segundo paramentro. */
 
                 const currentNamePokemon = target.prev().html()
-                const pokemonExist = currentPokemonList.find(function (item) {
+                const pokemonExist = listPokemon.find(function (item) {
                     return item.name === currentNamePokemon
                 })
                 /* O ".prev()" vai pegar o primeiro irmao anterior ao elemento ao qual foi relacionado.
@@ -79,7 +78,7 @@ selectPokemon.on("change", function (e) {
                 target. Adicionei o .html() pois eu queria o texto dentro do elemento que eu selecionei com o .prev().*/
 
                 if(pokemonExist){
-                    const newListPokemon = currentPokemonList.filter(function(item){
+                    const newListPokemon = listPokemon.filter(function(item){
                         return item.name != currentNamePokemon /* o ".filter" ele filtra o array em base ao paramentro que eu passar,
                         e cria um novo array EXCLUINDO tudo que for false no meu if. Ou seja, ele executa um filtro inverso,
                         tipo: se no array ele encontrar um valor igual ao que esta sendo comparado, ele vai pular esse valor. Se
@@ -109,6 +108,7 @@ selectPokemon.on("change", function (e) {
                     }),
                     types: response.types.map(element => element.type.name)
                 }
+
                 listPokemon.push(pokemon)
                 localStorage.setItem("pokemonList", JSON.stringify([...listPokemon]))/* "..." significa operador spread, que espalha o conteudo que
                 foi adicionado dentro do array "[]". Ou seja, se eu tiver mais de um elemento no array, ele
