@@ -1,0 +1,286 @@
+@import url("./variables.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  outline: none;
+}
+body {
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.font-size-lg {
+  font-size: 20px;
+}
+.main-logo {
+  margin-top: 200px;
+  margin-bottom: 85px;
+}
+.main-content {
+  background-color: white;
+  padding: 32px;
+  border-radius: 14px;
+  width: 920px;
+  height: 521px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 85px;
+}
+.div-values {
+  width: 404px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.div-bill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.div-bill-text {
+  display: flex;
+  justify-content: space-between;
+}
+.div-bill label {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 7px;
+}
+.div-bill input {
+  border: none;
+  border-radius: 7px;
+  background-color: var(--very-light-grayish-cyan);
+  background-image: url(/Desafio05/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 5%;
+  color: var(--dark-cyan);
+  height: 48px;
+  text-align: end;
+  padding-right: 5%;
+}
+#input-bill::placeholder {
+  color: var(--grayish-cyan);
+}
+.div-select-tips {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.div-select-tips p {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 16px;
+}
+.div-tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 14px;
+}
+.div-tips button {
+  background-color: var(--dark-cyan);
+  border: none;
+  border-radius: 7px;
+  color: white;
+  height: 48px;
+  transition: all 0.5s ease;
+}
+.div-tips button:hover {
+  background-color: var(--strong-cyan);
+  color: var(--dark-cyan);
+  cursor: pointer;
+}
+.div-tips button.active {
+  background-color: var(--strong-cyan);
+  color: var(--dark-cyan);
+}
+.div-tips input {
+  background-color: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 7px;
+  color: var(--dark-grayish-cyan);
+  width: 100%;
+  height: 48px;
+  padding-right: 26px;
+  text-align: end;
+}
+#input-custom::placeholder {
+  color: var(--grayish-cyan);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]:focus {
+  border: 2px solid var(--strong-cyan);
+}
+.div-number-of-people {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.div-number-of-people-text {
+  display: flex;
+  justify-content: space-between;
+}
+.div-number-of-people label {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 7px;
+}
+.div-number-of-people input {
+  border: none;
+  border-radius: 7px;
+  background-color: var(--very-light-grayish-cyan);
+  background-image: url(/Desafio05/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 5%;
+  color: var(--dark-cyan);
+  height: 48px;
+  text-align: end;
+  padding-right: 5%;
+}
+#input-of-people::placeholder {
+  color: var(--grayish-cyan);
+}
+#calculate-button {
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 7px;
+  height: 48px;
+  color: var(--dark-cyan);
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+#calculate-button:hover {
+  cursor: pointer;
+  background-color: var(--dark-cyan);
+  color: white;
+}
+.div-results {
+  background-color: var(--dark-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 404px;
+  height: 100%;
+  border-radius: 14px;
+  padding: 40px;
+}
+.div-results p {
+  color: white;
+  margin-bottom: -4px;
+}
+.div-results span {
+  color: var(--light-grayish-cyan);
+  font-size: 14px;
+  font-weight: 400;
+}
+.div-results button {
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 7px;
+  width: 333px;
+  height: 48px;
+  color: var(--dark-cyan);
+  text-transform: uppercase;
+}
+.div-results button:hover {
+  cursor: pointer;
+}
+.div-results button:disabled {
+  background-color: var(--dark-grayish-cyan);
+  color: var(--grayish-cyan);
+}
+.input-validation {
+  color: red;
+  text-align: end;
+}
+.div-tip-amount p#result-per-person,
+.div-total p#total-per-person {
+  color: var(--strong-cyan);
+  font-size: 43px;
+}
+.div-tip-amount {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.div-total {
+  display: flex;
+  margin-bottom: 110px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  padding: 16px;
+}
+footer p {
+  color: var(--dark-cyan);
+}
+footer a {
+  text-decoration: none;
+  color: var(--dark-grayish-cyan);
+}
+input.error-input-validation {
+  border: 2px solid red;
+}
+@media (max-width: 765px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .main-logo {
+    margin-top: 400px;
+    margin-bottom: 40px;
+  }
+  .main-content {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 14px 14px 0 0 ;
+  }
+  .div-values,
+  .div-results {
+    width: 100%;
+  }
+  .div-values{
+    margin-bottom: 32px;
+  }
+  .div-results{
+    padding: 30px;
+  }
+  .div-tips input{
+    padding-right: 0;
+    text-align: center;
+  }
+  .div-total {
+    margin-bottom: 32px;
+  }
+  .div-tip-amount p#result-per-person,
+  .div-total p#total-per-person {
+    font-size: 32px;
+    white-space: nowrap;
+  }
+  .div-results button {
+    width: 100%;
+  }
+  footer{
+    display: none;
+  }
+}

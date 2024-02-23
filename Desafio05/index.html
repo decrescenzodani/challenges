@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main>
+    <div class="main-logo">
+      <img src="./images/logo.svg" alt="Logo Splitter">
+    </div>
+    <div class="main-content">
+      <div class="div-values">
+        <div class="div-bill">
+          <div class="div-bill-text">
+            <label for="">Bill</label>
+            <span class="input-validation"></span>
+          </div>
+          <input type="number" name="bill" id="input-bill" class="font-size-lg" placeholder="0">
+        </div>
+
+        <div class="div-number-of-people">
+          <div class="div-number-of-people-text">
+            <label for="">Number of People</label>
+            <span class="input-validation"></span>
+          </div>
+          <input type="number" name="input-of-people" id="input-of-people" class="font-size-lg" placeholder="0">
+        </div>
+
+        <div class="div-select-tips">
+          <p>Select Tip %</p>
+          <div class="div-tips">
+            <button class="font-size-lg" value="5">5%</button>
+            <button class="font-size-lg" value="10">10%</button>
+            <button class="font-size-lg" value="15">15%</button>
+            <button class="font-size-lg" value="25"> 25%</button>
+            <button class="font-size-lg" value="50">50%</button>
+            <input type="number" name="custom" id="input-custom" placeholder="Custom" class="font-size-lg">
+          </div>
+        </div>
+
+        <button id="calculate-button" class="font-size-lg">Calculate</button>
+      </div>
+
+      <div class="div-results">
+        <div class="div-tip-amount">
+          <div class="div-amount-text">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+
+          <div class="div-amount-results">
+            <p id="result-per-person">$ 0.00</p>
+          </div>
+        </div>
+
+        <div class="div-total">
+          <div class="div-total-text">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+
+          <div class="div-total-results">
+            <p id="total-per-person">$ 0.00</p>
+          </div>
+        </div>
+
+        <button id="reset-button" class="font-size-lg" disabled>Reset</button>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>&emsp;
+    <p>Coded by <a href="https://www.linkedin.com/in/daniele-anuncia%C3%A7%C3%A3o-a335a61ab/">Dani A. Decrescenzo</a>.
+    </p>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
