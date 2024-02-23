@@ -33,6 +33,12 @@ calculateButton.addEventListener("click", function (e) {
     console.log(isButtonActive)
     const valuePercentage = isButtonActive ? isButtonActive.value : inputCustom.value
 
+    inputBill.classList.remove("error-input-validation")
+    inputBill.previousElementSibling.children[1].innerHTML = ""
+
+    inputNumberOfPeople.classList.remove("error-input-validation")
+    inputNumberOfPeople.previousElementSibling.children[1].innerHTML = ""
+    
     const valueInputBill = Number(inputBill.value)
     const valueInputNumberOfPeople = Number(inputNumberOfPeople.value)
 
@@ -57,11 +63,18 @@ percentageButtons.forEach(function (button) {
 resetButton.addEventListener("click", function(){
     //location.reload()
     this.setAttribute("disabled", true)
+
     inputBill.value = ""
     inputCustom.value = ""
     inputNumberOfPeople.value = ""
     resultPerPerson.innerHTML = "$ 0.00"
     totalPerPerson.innerHTML = "$ 0.00"
+
+    inputBill.classList.remove("error-input-validation")
+    inputBill.previousElementSibling.children[1].innerHTML = ""
+
+    inputNumberOfPeople.classList.remove("error-input-validation")
+    inputNumberOfPeople.previousElementSibling.children[1].innerHTML = ""
 
     percentageButtons.forEach(element => element.classList.remove("active"))
     
